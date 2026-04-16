@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forest Sciences MCQ Quiz — NPTEL</title>
+  <meta name="description" content="Practice NPTEL Forest Sciences MCQs week-by-week. Get instant feedback, review your mistakes, and track your score." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ SCREEN: HOME ═══════════════════════ -->
+  <div id="screen-home" class="screen active">
+    <div class="home-bg">
+      <div class="home-orb orb-1"></div>
+      <div class="home-orb orb-2"></div>
+      <div class="home-orb orb-3"></div>
+    </div>
+    <header class="home-header">
+      <div class="logo-pill">🌿 NPTEL</div>
+    </header>
+    <main class="home-main">
+      <p class="home-subtitle">Forest Sciences</p>
+      <h1 class="home-title">MCQ Practice Quiz</h1>
+      <p class="home-desc">Sharpen your concepts across 11 weeks of Forest Sciences. Choose your practice mode and start now.</p>
+
+      <div class="mode-cards">
+        <button id="btn-full-quiz" class="mode-card">
+          <span class="mode-icon">📋</span>
+          <span class="mode-label">Full Quiz</span>
+          <span class="mode-detail">All 110 questions · Weeks 1–11</span>
+        </button>
+        <button id="btn-week-select" class="mode-card">
+          <span class="mode-icon">📅</span>
+          <span class="mode-label">By Week</span>
+          <span class="mode-detail">10 questions · Choose a week</span>
+        </button>
+      </div>
+
+      <!-- Week picker (hidden until "By Week" is clicked) -->
+      <div id="week-picker" class="week-picker hidden">
+        <p class="week-picker-label">Select a week:</p>
+        <div class="week-grid" id="week-grid"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ═══════════════════════ SCREEN: QUIZ ════════════════════════ -->
+  <div id="screen-quiz" class="screen">
+    <div class="quiz-topbar">
+      <button id="btn-quit" class="quit-btn" title="Quit quiz">✕ Quit</button>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div id="progress-bar" class="progress-fill"></div>
+        </div>
+        <span id="progress-label" class="progress-text">Q 1 / 10</span>
+      </div>
+      <div id="score-chip" class="score-chip">🏆 0</div>
+    </div>
+
+    <div class="quiz-body">
+      <div class="question-card" id="question-card">
+        <div class="q-meta">
+          <span id="q-week-tag" class="week-tag">Week 1</span>
+          <span id="q-number-tag" class="q-num-tag">Q1</span>
+        </div>
+        <p id="question-text" class="question-text">Question goes here</p>
+        <div id="options-list" class="options-list"></div>
+        <div id="feedback-box" class="feedback-box hidden"></div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="btn-next" class="btn-next hidden">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SCREEN: RESULTS ═══════════════════════ -->
+  <div id="screen-results" class="screen">
+    <div class="results-bg">
+      <div class="home-orb orb-1"></div>
+      <div class="home-orb orb-2"></div>
+    </div>
+    <div class="results-content">
+      <div id="results-emoji" class="results-emoji">🎉</div>
+      <h2 class="results-title">Quiz Complete!</h2>
+      <div class="score-ring-wrap">
+        <svg class="score-ring" viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="50"/>
+          <circle id="ring-fill" class="ring-progress" cx="60" cy="60" r="50"
+                  stroke-dasharray="314" stroke-dashoffset="314"/>
+        </svg>
+        <div class="score-ring-label">
+          <span id="score-display" class="score-big">0</span>
+          <span class="score-total" id="score-total-label">/ 10</span>
+        </div>
+      </div>
+      <p id="score-message" class="score-message"></p>
+
+      <div class="results-actions">
+        <button id="btn-review" class="btn-review">📝 Review Mistakes</button>
+        <button id="btn-home" class="btn-home">🏠 Home</button>
+        <button id="btn-retry" class="btn-retry">🔄 Retry</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SCREEN: REVIEW ════════════════════════ -->
+  <div id="screen-review" class="screen">
+    <div class="review-header">
+      <button id="btn-back-results" class="back-btn">← Results</button>
+      <h2 class="review-title">📝 Mistakes Review</h2>
+      <span id="mistake-count-badge" class="mistake-badge">0 mistakes</span>
+    </div>
+    <div id="review-list" class="review-list"></div>
+    <div class="review-footer">
+      <button id="btn-home-from-review" class="btn-home">🏠 Home</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>
