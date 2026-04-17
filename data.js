@@ -22,7 +22,7 @@
           "c": "semi-evergreen forests",
           "d": "moist deciduous forests"
         },
-        "correct_answer": "d"
+        "correct_answer": "a"
       },
       {
         "question_number": 3,
@@ -137,7 +137,7 @@
           "c": "disclimax",
           "d": "catastrophic climax"
         },
-        "correct_answer": "c"
+        "correct_answer": "d"
       },
       {
         "question_number": 3,
@@ -190,7 +190,7 @@
           "a": "APAR + LUE",
           "b": "APAR X LUE",
           "c": "APAR - LUE",
-          "d": "APAR Ã· LUE"
+          "d": "APAR ÃƒÂ· LUE"
         },
         "correct_answer": "b"
       },
@@ -356,7 +356,7 @@
           "c": "10% of tree height",
           "d": "20% of tree height"
         },
-        "correct_answer": "a"
+        "correct_answer": "b"
       },
       {
         "question_number": 2,
@@ -367,18 +367,18 @@
           "c": "1.57 m",
           "d": "2.47 m"
         },
-        "correct_answer": "c"
+        "correct_answer": "a"
       },
       {
         "question_number": 3,
-        "question": "3 trees are located in a sample plot of 15 m Ã— 15 m. Their dbh are as under: dbh = 25 cm, 30 cm, 35 cm. Find the stand basal area in sq m per Ha.",
+        "question": "3 trees are located in a sample plot of 15 m Ãƒâ€” 15 m. Their dbh are as under: dbh = 25 cm, 30 cm, 35 cm. Find the stand basal area in sq m per Ha.",
         "options": {
           "a": "9.6",
           "b": "14.6",
           "c": "21.6",
           "d": "27.6"
         },
-        "correct_answer": "c"
+        "correct_answer": "a"
       },
       {
         "question_number": 4,
@@ -393,7 +393,7 @@
       },
       {
         "question_number": 5,
-        "question": "In a triangle, the angle between base and hypotenuse, Î¸ = 60Â° and the hypotenuse c = 2 cm. Find the length of the base b.",
+        "question": "In a triangle, the angle between base and hypotenuse, ÃŽÂ¸ = 60Ã‚Â° and the hypotenuse c = 2 cm. Find the length of the base b.",
         "options": {
           "a": "0.33",
           "b": "0.5",
@@ -422,7 +422,7 @@
           "c": "10% of tree height",
           "d": "20% of tree height"
         },
-        "correct_answer": "b"
+        "correct_answer": "c"
       },
       {
         "question_number": 8,
@@ -441,8 +441,8 @@
         "options": {
           "a": "dob = dub + tb",
           "b": "dob = dub - tb",
-          "c": "dob = dub + 2 Ã— tb",
-          "d": "dob = dub - 2 Ã— tb"
+          "c": "dob = dub + 2 x tb",
+          "d": "dob = dub - 2 x tb"
         },
         "correct_answer": "c"
       },
@@ -685,7 +685,7 @@
           "c": "the immobilising gun is a weapon and capturing is not hunting.",
           "d": "the immobilising gun is not a weapon and capturing is not hunting."
         },
-        "correct_answer": "d"
+        "correct_answer": "a"
       }
     ]
   },
@@ -723,7 +723,7 @@
           "c": "artificial regeneration by direct sowing",
           "d": "artificial regeneration by planting seedlings"
         },
-        "correct_answer": "d"
+        "correct_answer": "b"
       },
       {
         "question_number": 4,
@@ -756,7 +756,7 @@
           "c": "late stage of life",
           "d": "any stage of life"
         },
-        "correct_answer": "a"
+        "correct_answer": "d"
       },
       {
         "question_number": 7,
@@ -767,7 +767,7 @@
           "c": "Harvesting -> Regeneration -> Stand tending",
           "d": "Regeneration -> Harvesting -> Stand tending"
         },
-        "correct_answer": "d"
+        "correct_answer": "c"
       },
       {
         "question_number": 8,
@@ -882,7 +882,7 @@
           "c": "60-90 years",
           "d": "90-120 years"
         },
-        "correct_answer": "c"
+        "correct_answer": "b"
       },
       {
         "question_number": 8,
@@ -953,7 +953,7 @@
           "c": "V2-V1+H-I+M",
           "d": "V2-V1+H-I-M"
         },
-        "correct_answer": "c"
+        "correct_answer": "b"
       },
       {
         "question_number": 4,
@@ -975,7 +975,7 @@
           "c": "open face",
           "d": "all of these"
         },
-        "correct_answer": "c"
+        "correct_answer": "a"
       },
       {
         "question_number": 6,
@@ -1008,7 +1008,7 @@
           "c": "red",
           "d": "white"
         },
-        "correct_answer": "a"
+        "correct_answer": "d"
       },
       {
         "question_number": 9,
@@ -1079,7 +1079,7 @@
           "c": "ber",
           "d": "teak"
         },
-        "correct_answer": "d"
+        "correct_answer": "c"
       },
       {
         "question_number": 5,
@@ -1123,7 +1123,7 @@
           "c": "ber",
           "d": "teak"
         },
-        "correct_answer": "a"
+        "correct_answer": "d"
       },
       {
         "question_number": 9,
@@ -1263,6 +1263,121 @@
         "correct_answer": "b"
       }
     ]
+  },
+
+  {
+    "week": 12,
+    "questions": [
+      {
+        "question_number": 1,
+        "question": "The climax near Tindni village is being controlled by disturbance by cattle. This is an example of",
+        "options": {
+          "a": "climatic climax",
+          "b": "edaphic climax",
+          "c": "disclimax",
+          "d": "catastrophic climax"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question_number": 2,
+        "question": "â€œScience of relationships between organisms and their environmentsâ€ is the definition of:",
+        "options": {
+          "a": "conservation",
+          "b": "preservation",
+          "c": "environmentalism",
+          "d": "ecology"
+        },
+        "correct_answer": "d"
+      },
+      {
+        "question_number": 3,
+        "question": "â€œallowing some places and some creatures to exist without significant human interferenceâ€ is a definition of",
+        "options": {
+          "a": "conservation",
+          "b": "preservation",
+          "c": "environmentalism",
+          "d": "all of these"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question_number": 4,
+        "question": "For absolute form factor, the reference for the base of the cylinder is",
+        "options": {
+          "a": "base of the tree",
+          "b": "breast height",
+          "c": "10% of tree height",
+          "d": "20% of tree height"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question_number": 5,
+        "question": "Which of these has the highest organic matter content?",
+        "options": {
+          "a": "peaty soil",
+          "b": "alluvial soil",
+          "c": "saline soil",
+          "d": "red and yellow soil"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question_number": 6,
+        "question": "For a tree with dbh = 45.6 cm, height = 27 m and total stem volume of 1.78 cum, the artificial form factor for the tree is:",
+        "options": {
+          "a": "0.1",
+          "b": "0.2",
+          "c": "0.3",
+          "d": "0.4"
+        },
+        "correct_answer": "d"
+      },
+      {
+        "question_number": 7,
+        "question": "â€œPlant community, predominantly comprised of trees and other woody vegetation, usually with a closed canopy\" is",
+        "options": {
+          "a": "silvicultural definition of forests",
+          "b": "FAO definition of forests",
+          "c": "legal definition of forests",
+          "d": "ecological definition of forests"
+        },
+        "correct_answer": "d"
+      },
+      {
+        "question_number": 8,
+        "question": "The term laterite soil is derived from Latin later which means",
+        "options": {
+          "a": "red",
+          "b": "brick",
+          "c": "fertile",
+          "d": "infertile"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question_number": 9,
+        "question": "Choose the correct statement:",
+        "options": {
+          "a": "For a non-circular cross-section, girth tape over-estimates the sectional area.",
+          "b": "For a non-circular cross-section, girth tape under-estimates the sectional area.",
+          "c": "For a non-circular cross-section, girth tape correctly estimates the sectional area.",
+          "d": "None of these is a correct statement."
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question_number": 10,
+        "question": "Vertical arrangement of soil horizons is called",
+        "options": {
+          "a": "soil texture",
+          "b": "soil structure",
+          "c": "soil profile",
+          "d": "soil science"
+        },
+        "correct_answer": "c"
+      }
+    ]
   }
 ]
-;

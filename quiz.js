@@ -25,10 +25,13 @@ function showScreen(name) {
 }
 
 // Home
-const btnFullQuiz   = document.getElementById('btn-full-quiz');
-const btnWeekSelect = document.getElementById('btn-week-select');
-const weekPicker    = document.getElementById('week-picker');
-const weekGrid      = document.getElementById('week-grid');
+const btnFullQuiz    = document.getElementById('btn-full-quiz');
+const btnWeekSelect  = document.getElementById('btn-week-select');
+const btnMixedQuiz   = document.getElementById('btn-mixed-quiz');
+const weekPicker     = document.getElementById('week-picker');
+const weekGrid       = document.getElementById('week-grid');
+const mixedQuizPanel = document.getElementById('mixed-quiz-panel');
+const mixedCountGrid = document.getElementById('mixed-count-grid');
 
 // Quiz
 const progressBar   = document.getElementById('progress-bar');
@@ -92,12 +95,55 @@ function buildWeekGrid() {
 // ─── Home Interactions ──────────────────────────────────────
 btnFullQuiz.addEventListener('click', () => {
   weekPicker.classList.add('hidden');
+  mixedQuizPanel.classList.add('hidden');
   startFullQuiz();
 });
 
 btnWeekSelect.addEventListener('click', () => {
+  mixedQuizPanel.classList.add('hidden');
   weekPicker.classList.toggle('hidden');
 });
+
+btnMixedQuiz.addEventListener('click', () => {
+  weekPicker.classList.add('hidden');
+  mixedQuizPanel.classList.toggle('hidden');
+});
+
+// Mixed count buttons
+mixedCountGrid.querySelectorAll('.mixed-count-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const val = btn.dataset.count;
+    const count = val === 'all' ? Infinity : parseInt(val, 10);
+    mixedQuizPanel.classList.add('hidden');
+    startMixedQuiz(count);
+  });
+});
+
+// ─── Shuffle Helper ─────────────────────────────────────────
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ─── Mixed Quiz ─────────────────────────────────────────────
+function startMixedQuiz(count) {
+  // Flatten all questions from all weeks
+  const flat = [];
+  allData.forEach(weekData => {
+    weekData.questions.forEach(q => {
+      flat.push({ ...q, week: weekData.week });
+    });
+  });
+  // Shuffle, then slice to requested count
+  const shuffled = shuffle(flat);
+  const subset = isFinite(count) ? shuffled.slice(0, count) : shuffled;
+  retryData = { questions: subset, mode: 'mixed', count };
+  startQuiz(subset);
+}
 
 function startFullQuiz() {
   const flat = [];
@@ -251,6 +297,7 @@ btnNext.addEventListener('click', () => {
 btnQuit.addEventListener('click', () => {
   if (confirm('Are you sure you want to quit? Your progress will be lost.')) {
     weekPicker.classList.add('hidden');
+    mixedQuizPanel.classList.add('hidden');
     showScreen('home');
   }
 });
@@ -294,6 +341,7 @@ btnReview.addEventListener('click', showReview);
 
 btnHome.addEventListener('click', () => {
   weekPicker.classList.add('hidden');
+  mixedQuizPanel.classList.add('hidden');
   showScreen('home');
 });
 
@@ -355,6 +403,7 @@ function showReview() {
 btnBackResults.addEventListener('click', () => showScreen('results'));
 btnHomeFromReview.addEventListener('click', () => {
   weekPicker.classList.add('hidden');
+  mixedQuizPanel.classList.add('hidden');
   showScreen('home');
 });
 

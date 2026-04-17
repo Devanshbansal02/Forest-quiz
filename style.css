@@ -213,6 +213,62 @@ body {
 .week-btn:hover { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); transform: scale(1.08); }
 .week-btn:active { transform: scale(0.96); }
 
+/* ── Mixed Quiz card accent ─────────────────── */
+.mode-card-mixed::before {
+  background: linear-gradient(135deg, rgba(167,139,250,0.15) 0%, transparent 60%) !important;
+}
+.mode-card-mixed:hover {
+  border-color: #a78bfa !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(167,139,250,0.4) !important;
+}
+
+/* ── Mixed Quiz panel ───────────────────────── */
+.mixed-quiz-panel {
+  text-align: center;
+  margin-top: 8px;
+  animation: fadeIn 0.25s ease;
+}
+.mixed-quiz-panel.hidden { display: none; }
+
+.mixed-count-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 380px;
+  margin-bottom: 14px;
+}
+
+.mixed-count-btn {
+  min-width: 64px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  border: 1px solid rgba(167,139,250,0.25);
+  color: #a78bfa;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 16px;
+}
+.mixed-count-btn:hover {
+  background: rgba(167,139,250,0.12);
+  border-color: #a78bfa;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(167,139,250,0.3);
+}
+.mixed-count-btn:active { transform: scale(0.96); }
+
+.mixed-hint {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+
 /* ───────────────────────────────────────────
    QUIZ SCREEN
 ─────────────────────────────────────────── */

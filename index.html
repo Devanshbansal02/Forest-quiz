@@ -24,18 +24,23 @@
     <main class="home-main">
       <p class="home-subtitle">Forest Sciences</p>
       <h1 class="home-title">MCQ Practice Quiz</h1>
-      <p class="home-desc">Sharpen your concepts across 11 weeks of Forest Sciences. Choose your practice mode and start now.</p>
+      <p class="home-desc">Sharpen your concepts across 12 weeks of Forest Sciences. Choose your practice mode and start now.</p>
 
       <div class="mode-cards">
         <button id="btn-full-quiz" class="mode-card">
           <span class="mode-icon">📋</span>
           <span class="mode-label">Full Quiz</span>
-          <span class="mode-detail">All 110 questions · Weeks 1–11</span>
+          <span class="mode-detail">All questions · Weeks 1–12</span>
         </button>
         <button id="btn-week-select" class="mode-card">
           <span class="mode-icon">📅</span>
           <span class="mode-label">By Week</span>
           <span class="mode-detail">10 questions · Choose a week</span>
+        </button>
+        <button id="btn-mixed-quiz" class="mode-card mode-card-mixed">
+          <span class="mode-icon">🔀</span>
+          <span class="mode-label">Mixed Quiz</span>
+          <span class="mode-detail">Shuffled · All 12 weeks</span>
         </button>
       </div>
 
@@ -43,6 +48,19 @@
       <div id="week-picker" class="week-picker hidden">
         <p class="week-picker-label">Select a week:</p>
         <div class="week-grid" id="week-grid"></div>
+      </div>
+
+      <!-- Mixed Quiz panel (hidden until "Mixed Quiz" is clicked) -->
+      <div id="mixed-quiz-panel" class="mixed-quiz-panel hidden">
+        <p class="week-picker-label">How many questions?</p>
+        <div class="mixed-count-grid" id="mixed-count-grid">
+          <button class="mixed-count-btn" data-count="10">10</button>
+          <button class="mixed-count-btn" data-count="20">20</button>
+          <button class="mixed-count-btn" data-count="30">30</button>
+          <button class="mixed-count-btn" data-count="50">50</button>
+          <button class="mixed-count-btn" data-count="all">All</button>
+        </div>
+        <p class="mixed-hint">Questions are randomly drawn from all 12 weeks and shuffled.</p>
       </div>
     </main>
   </div>
